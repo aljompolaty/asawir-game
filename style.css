@@ -1,0 +1,93 @@
+:root{--bg:#fff6dc;--ink:#2b2a4c;--card:#fff;--g:#2fb86b;--b:#2e8bf0;--o:#ff9f1c;--p:#e9507e;--r:#e5484d;--sh:rgba(43,42,76,.18);--land:#cdeeb0;--land2:#fff1c1;--road:#c98b3a;--gold:#ffc83d;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1b3a;--ink:#fff6dc;--card:#2f2c5c;--sh:rgba(0,0,0,.4);--land:#1f3d45;--land2:#2a2752;--road:#9b8cff}}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:Cairo,Tahoma,sans-serif;font-weight:800}
+body{background:var(--bg)}
+#app{max-width:640px;margin:0 auto;padding:14px;text-align:center}
+h1,h2{font-family:Lalezar,Cairo,sans-serif;font-weight:400;margin:6px 0}
+h1{font-size:2.3rem;color:var(--p)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pill{background:var(--card);border-radius:30px;padding:6px 14px;box-shadow:0 3px 0 var(--sh)}
+button{font:inherit;color:inherit;cursor:pointer;border:0}
+button:focus-visible{outline:4px solid var(--b);outline-offset:2px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.big{border-radius:24px;padding:20px 8px;color:#fff;font-size:1.15rem;box-shadow:0 6px 0 var(--sh);transition:transform .1s}
+.big:active{transform:translateY(4px);box-shadow:0 2px 0 var(--sh)}
+.big span{display:block;font-size:3rem;line-height:1.2}
+.mascot{font-size:4.5rem;animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.card{background:var(--card);border-radius:26px;padding:18px;box-shadow:0 6px 0 var(--sh);margin:12px 0}
+.emo{font-size:5rem;line-height:1.1}
+.anim .emo{display:inline-block;animation:scrub 1s ease-in-out infinite}
+@keyframes scrub{25%{transform:rotate(-12deg) translateX(-8px)}75%{transform:rotate(12deg) translateX(8px)}}
+.water{position:relative;height:70px;font-size:1.6rem}
+.water b{font-size:2.2rem;display:block}
+.water i{position:absolute;top:34px;font-style:normal;animation:drip 1s linear infinite}
+@keyframes drip{from{transform:translateY(-6px);opacity:1}to{transform:translateY(34px);opacity:0}}
+.a1 .emo{animation:rub .35s ease-in-out infinite}@keyframes rub{50%{transform:scale(1.15) rotate(8deg)}}
+.a2 .emo{animation:puff .7s ease-in-out infinite}@keyframes puff{50%{transform:scale(1.3)}}
+.a3 .emo{animation:sniff .5s ease-in-out infinite}@keyframes sniff{50%{transform:translateY(-8px) scale(1.1)}}
+.a4 .emo,.t6 .emo{animation:face 1s ease-in-out infinite}@keyframes face{50%{transform:translateY(10px)}}
+.a5 .emo{animation:slide 1s ease-in-out infinite}@keyframes slide{0%,100%{transform:translateX(-24px)}50%{transform:translateX(24px)}}
+.a6 .emo{animation:wipe 1.2s ease-in-out infinite}@keyframes wipe{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px) rotate(-6deg)}}
+.a7 .emo{animation:flick .6s ease-in-out infinite}@keyframes flick{50%{transform:rotate(14deg)}}
+.a8 .emo{animation:foot .6s ease-in-out infinite}@keyframes foot{50%{transform:translateY(12px) rotate(-10deg)}}
+.t5 .emo{animation:pat .7s ease-in infinite}@keyframes pat{0%,100%{transform:translateY(-14px)}50%{transform:translateY(8px)}}
+.q{font-size:1.5rem;margin:8px 0}
+.opts{display:grid;gap:10px;margin-top:10px}
+.opt{background:var(--card);border-radius:20px;padding:14px;font-size:1.25rem;box-shadow:0 5px 0 var(--sh);border:3px solid var(--b)}
+.opt.ok{background:var(--g);color:#fff;border-color:var(--g);animation:pop .4s}
+.opt.no{background:var(--r);color:#fff;border-color:var(--r);animation:shake .4s}
+@keyframes pop{50%{transform:scale(1.08)}}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.bar{height:14px;background:var(--sh);border-radius:10px;overflow:hidden;margin:8px 0}
+.bar i{display:block;height:100%;background:var(--o);transition:width .4s}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.slot{min-height:54px;border:3px dashed var(--b);border-radius:16px;padding:6px;font-size:1rem;display:flex;align-items:center;gap:6px;background:var(--card)}
+.slot.f{border-style:solid;border-color:var(--g);background:var(--g);color:#fff}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.tile{background:var(--card);border:3px solid var(--o);border-radius:18px;padding:10px;font-size:1rem;box-shadow:0 4px 0 var(--sh)}
+.tile b{display:block;font-size:2.2rem}
+.tile.no{animation:shake .4s;border-color:var(--r)}
+.small{border-radius:20px;padding:8px 16px;background:var(--o);color:#fff;box-shadow:0 3px 0 var(--sh)}
+.row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+#cf{position:fixed;inset:0;pointer-events:none;z-index:9}
+/* خريطة المغامرة */
+.map{position:relative;height:680px;margin-top:10px;border-radius:30px;background:linear-gradient(var(--land2),var(--land));box-shadow:0 6px 0 var(--sh);overflow:hidden}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map path{fill:none;stroke:var(--road);stroke-width:14;stroke-linecap:round;stroke-dasharray:1 22;vector-effect:non-scaling-stroke;opacity:.6}
+.map path.on{stroke-dasharray:none;opacity:1}
+.deco i{position:absolute;font-style:normal;font-size:2rem;opacity:.75;transform:translate(-50%,-50%)}
+.node{position:absolute;transform:translate(-50%,-42px);background:none;display:flex;flex-direction:column;align-items:center;gap:3px;width:max-content;z-index:1}
+.dot{width:84px;height:84px;border-radius:50%;background:var(--c);display:grid;place-items:center;font-size:2.6rem;border:5px solid #fff;box-shadow:0 6px 0 var(--sh);transition:transform .1s}
+.node:active .dot{transform:translateY(4px)}
+.lbl{background:var(--card);border-radius:14px;padding:2px 10px;font-size:.95rem;box-shadow:0 3px 0 var(--sh);white-space:nowrap}
+.st{color:var(--gold);font-size:1.25rem;letter-spacing:2px;line-height:1}
+.st i{font-style:normal;color:var(--ink);opacity:.2}
+.big-st{font-size:3.5rem}
+.lock .dot{background:#b9b6c9}
+.lock .lbl{opacity:.6}
+.cur .dot{animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{0%{box-shadow:0 6px 0 var(--sh),0 0 0 0 var(--c)}100%{box-shadow:0 6px 0 var(--sh),0 0 0 16px transparent}}
+.shk .dot{animation:shake .4s}
+.pal{position:absolute;transform:translate(-50%,-62%);pointer-events:none;z-index:2}
+.pal img{position:relative;display:block;height:150px;animation:bob 2s ease-in-out infinite}
+.pal::after{content:'';position:absolute;left:22%;right:22%;bottom:-6px;height:12px;border-radius:50%;background:rgba(0,0,0,.2)}
+/* أساور */
+.hero{display:block;height:220px;margin:18px auto 6px;animation:bob 2s ease-in-out infinite}
+.guide{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px 0}
+.ava{width:76px;height:76px;flex:none;border-radius:50%;object-fit:cover;background:#fff;border:4px solid var(--card);box-shadow:0 3px 0 var(--sh)}
+.bub{position:relative;background:var(--card);border-radius:18px;padding:8px 16px;font-size:1.2rem;box-shadow:0 3px 0 var(--sh)}
+.scene{background:#fff;border-radius:20px;padding:8px;margin:0 auto;width:max-content;max-width:100%;box-shadow:inset 0 0 0 3px var(--sh)}
+.scene img{display:block;height:min(260px,34vh);max-width:100%;object-fit:contain}
+/* تطلّ داخل عمود اللعبة (عرضه 640) لا عند حافة الشاشة العريضة */
+.cheer{position:fixed;bottom:0;left:max(4px,calc(50% - 316px));direction:ltr;display:flex;align-items:flex-end;gap:6px;z-index:8;pointer-events:none;animation:cheer 1.6s ease both}
+.cheer img{display:block}
+.cheer .bub{direction:rtl;margin-bottom:24px;font-size:1.1rem;white-space:nowrap}
+@keyframes cheer{0%{transform:translateY(100%)}18%,82%{transform:translateY(4%)}100%{transform:translateY(100%)}}
+.bub.l::before{right:auto;left:-9px;border-left:0;border-right:9px solid var(--card)}
+.bub::before{content:'';position:absolute;right:-9px;top:50%;margin-top:-9px;border:9px solid transparent;border-right:0;border-left-color:var(--card)}
+.stk .emo{font-size:4rem}.stk .q{font-size:1.1rem}
+.stk.off{opacity:.5}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}

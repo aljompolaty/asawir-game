@@ -1,0 +1,19 @@
+{
+  "name": "مغامرة التربية الإسلامية مع أساور",
+  "short_name": "مغامرة أساور",
+  "description": "لعبة لتعليم دروس التربية الإسلامية للصف الأول: أركان الإسلام والإيمان والطهارة والوضوء",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff6dc",
+  "theme_color": "#e9507e",
+  "categories": ["education", "kids"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
